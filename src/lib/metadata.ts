@@ -27,6 +27,11 @@ export function buildMetadata({ title, description, path, noIndex }: BuildMetada
   return {
     title,
     description,
+    applicationName: site.name,
+    generator: site.name,
+    authors: [{ name: site.name, url: site.url }],
+    creator: site.name,
+    publisher: site.name,
     alternates: { canonical: url },
     keywords: siteKeywords,
     openGraph: {

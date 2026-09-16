@@ -19,6 +19,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+  applicationName: site.name,
+  generator: site.name,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "creative services",
+  classification: "Las Vegas content and social media studio",
   ...buildMetadata({
     title: `${site.name} — Las Vegas Content & Social Media Studio`,
     description: site.description,
