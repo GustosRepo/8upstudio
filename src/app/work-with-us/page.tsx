@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
 import { InquiryForm } from "@/components/inquiry/InquiryForm";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Work With Us",
   description: "Start a project with 8UP Studio — photo, video, and social content for Las Vegas businesses.",
-};
+  path: "/work-with-us",
+});
 
 export default function WorkWithUsPage() {
   return (

@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { MediaPlaceholder } from "@/components/media/MediaPlaceholder";
 import { serviceFamilies } from "@/data/services";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Services",
   description:
     "Content creation, social media management, and monthly content programs for Las Vegas businesses.",
-};
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

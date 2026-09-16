@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { WorkGrid } from "@/components/work/WorkGrid";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Work",
   description:
     "Photo, video, and social content for Las Vegas brands and events by 8UP Studio.",
-};
+  path: "/work",
+});
 
 export default function WorkPage() {
   return (

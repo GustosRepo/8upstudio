@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { MediaPlaceholder } from "@/components/media/MediaPlaceholder";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "About",
   description:
     "The creative studio behind 8UP — content creators who understand both sides of the camera.",
-};
+  path: "/about",
+});
 
 const beliefs = [
   "We shoot, edit, and post — so the content is built for how it will actually be used.",
