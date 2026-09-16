@@ -103,7 +103,7 @@ export function InquiryForm() {
 
   return (
     <div>
-      <div className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-ink/50">
+      <div className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase text-ink/65">
         {Array.from({ length: totalSteps }).map((_, i) => (
           <span
             key={i}
@@ -111,7 +111,7 @@ export function InquiryForm() {
           />
         ))}
       </div>
-      <p className="mt-3 text-xs tracking-[0.15em] uppercase text-ink/40">
+      <p className="mt-3 text-xs tracking-[0.15em] uppercase text-ink/55">
         Step {step} of {totalSteps}
       </p>
 
@@ -137,6 +137,7 @@ export function InquiryForm() {
                     onClick={() =>
                       setForm((f) => ({ ...f, services: toggle(f.services, option) }))
                     }
+                    aria-pressed={form.services.includes(option)}
                     className={cn(
                       "border px-5 py-4 text-left text-sm transition-colors",
                       form.services.includes(option)
@@ -215,6 +216,7 @@ export function InquiryForm() {
                     type="button"
                     key={option}
                     onClick={() => setForm((f) => ({ ...f, goals: toggle(f.goals, option) }))}
+                    aria-pressed={form.goals.includes(option)}
                     className={cn(
                       "border px-5 py-4 text-left text-sm transition-colors",
                       form.goals.includes(option)
@@ -259,6 +261,7 @@ export function InquiryForm() {
                       type="button"
                       key={option}
                       onClick={() => setForm((f) => ({ ...f, budget: option }))}
+                      aria-pressed={form.budget === option}
                       className={cn(
                         "border px-5 py-3 text-left text-sm transition-colors",
                         form.budget === option
@@ -296,7 +299,7 @@ export function InquiryForm() {
           type="button"
           onClick={() => setStep((s) => Math.max(1, s - 1))}
           disabled={step === 1}
-          className="text-xs tracking-[0.15em] uppercase text-ink/50 disabled:opacity-0"
+          className="text-xs tracking-[0.15em] uppercase text-ink/65 disabled:opacity-0"
         >
           ← Back
         </button>
@@ -331,7 +334,7 @@ const inputClass =
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="flex flex-col gap-2 text-sm">
-      <span className="text-xs tracking-[0.1em] uppercase text-ink/50">{label}</span>
+      <span className="text-xs tracking-[0.1em] uppercase text-ink/65">{label}</span>
       {children}
     </label>
   );

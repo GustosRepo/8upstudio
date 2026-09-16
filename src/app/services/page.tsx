@@ -14,7 +14,7 @@ export default function ServicesPage() {
   return (
     <div className="px-6 pt-32 pb-28 sm:px-10 sm:pt-40 sm:pb-40">
       <div className="mx-auto max-w-6xl">
-        <p className="text-xs tracking-[0.2em] uppercase text-ink/50">Services</p>
+        <p className="text-xs tracking-[0.2em] uppercase text-ink/65">Services</p>
         <h1 className="mt-4 max-w-2xl font-serif text-5xl tracking-tight sm:text-7xl">
           Built around three ways we help you grow.
         </h1>
@@ -37,7 +37,7 @@ export default function ServicesPage() {
                   {service.headline}
                 </h2>
                 <p className="mt-6 max-w-md text-ink/70">{service.copy}</p>
-                <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-[0.1em] uppercase text-ink/50">
+                <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-[0.1em] uppercase text-ink/65">
                   {service.offerings.map((offering) => (
                     <li key={offering}>{offering}</li>
                   ))}

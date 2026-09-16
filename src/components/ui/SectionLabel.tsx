@@ -12,7 +12,7 @@ export function SectionLabel({ index, label, className, light }: SectionLabelPro
     <p
       className={cn(
         "flex items-center gap-3 text-xs tracking-[0.2em] uppercase",
-        light ? "text-ivory/60" : "text-ink/50",
+        light ? "text-ivory/60" : "text-ink/65",
         className
       )}
     >

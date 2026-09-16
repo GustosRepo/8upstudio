@@ -24,7 +24,7 @@ export function ServicesShowcase() {
             </h3>
             <p className="mt-6 max-w-md text-ivory/70">{service.copy}</p>
 
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-[0.1em] uppercase text-ivory/50">
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs tracking-[0.1em] uppercase text-ivory/70">
               {service.offerings.map((offering) => (
                 <li key={offering}>{offering}</li>
               ))}

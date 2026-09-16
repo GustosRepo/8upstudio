@@ -38,7 +38,7 @@ export default async function AdminDashboardPage({
 
   return (
     <div>
-      <p className="text-xs tracking-[0.2em] uppercase text-ink/50">
+      <p className="text-xs tracking-[0.2em] uppercase text-ink/65">
         New Leads — {newCount}
       </p>
       <h1 className="mt-2 font-serif text-4xl tracking-tight">Leads</h1>
@@ -56,6 +56,7 @@ export default async function AdminDashboardPage({
             <Link
               key={s}
               href={s === "all" ? "/admin" : `/admin?status=${s}`}
+              aria-current={(status ?? "all") === s ? "page" : undefined}
               className={cn(
                 "border px-4 py-2 text-xs tracking-[0.15em] uppercase transition-colors",
                 (status ?? "all") === s
@@ -87,14 +88,14 @@ export default async function AdminDashboardPage({
           >
             <div>
               <p className="font-serif text-xl">{lead.name}</p>
-              <p className="text-xs tracking-[0.1em] uppercase text-ink/50">
+              <p className="text-xs tracking-[0.1em] uppercase text-ink/65">
                 {lead.business_name || "—"}
               </p>
             </div>
             <p className="text-sm text-ink/70">{lead.services.join(" + ") || "—"}</p>
             <p className="text-sm text-ink/70">{lead.budget || "—"}</p>
             <div className="flex items-center gap-4">
-              <span className="text-xs tracking-[0.1em] uppercase text-ink/50">
+              <span className="text-xs tracking-[0.1em] uppercase text-ink/65">
                 {new Date(lead.created_at).toLocaleDateString(undefined, {
                   month: "short",
                   day: "numeric",
@@ -106,7 +107,7 @@ export default async function AdminDashboardPage({
                   lead.status === "new" && "border-burgundy text-burgundy",
                   lead.status === "contacted" && "border-ink/40 text-ink/70",
                   lead.status === "booked" && "border-mauve text-mauve",
-                  lead.status === "closed" && "border-ink/20 text-ink/40"
+                  lead.status === "closed" && "border-ink/20 text-ink/55"
                 )}
               >
                 {lead.status}
@@ -116,7 +117,7 @@ export default async function AdminDashboardPage({
         ))}
 
         {leads.length === 0 && !error && (
-          <p className="py-10 text-sm text-ink/50">No leads match these filters yet.</p>
+          <p className="py-10 text-sm text-ink/65">No leads match these filters yet.</p>
         )}
       </div>
     </div>

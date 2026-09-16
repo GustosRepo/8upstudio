@@ -29,14 +29,14 @@ export function CaseStudySection() {
               {study.metrics.map((metric) => (
                 <div key={metric.label}>
                   <p className="font-serif text-3xl">{metric.value}</p>
-                  <p className="text-[10px] tracking-[0.15em] uppercase text-ink/50">
+                  <p className="text-[10px] tracking-[0.15em] uppercase text-ink/65">
                     {metric.label}
                   </p>
                 </div>
               ))}
             </div>
 
-            <p className="mt-8 text-xs tracking-[0.15em] uppercase text-ink/50">
+            <p className="mt-8 text-xs tracking-[0.15em] uppercase text-ink/65">
               {study.services.join(" · ")}
             </p>
           </Reveal>

@@ -12,3 +12,5 @@ export const primaryNav: NavItem[] = [
 export const inquireNav: NavItem = { label: "Inquire", href: "/work-with-us" };
 
 export const footerNav: NavItem[] = [...primaryNav, inquireNav];
+
+export const legalNav: NavItem[] = [{ label: "Privacy", href: "/privacy" }];

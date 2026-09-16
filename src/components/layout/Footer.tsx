@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { footerNav } from "@/data/navigation";
+import { footerNav, legalNav } from "@/data/navigation";
 import { site, socialLinks } from "@/data/site";
 
 export function Footer() {
@@ -36,9 +36,27 @@ export function Footer() {
             ))}
           </div>
 
-          <p className="text-ivory/50">
+          <p className="text-ivory/70">
             {site.location} · © {new Date().getFullYear()} {site.name}
           </p>
+        </div>
+
+        <div className="flex flex-col gap-4 border-t border-ivory/10 pt-6 text-[10px] tracking-[0.1em] uppercase text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
+          <nav className="flex flex-wrap gap-6">
+            {legalNav.map((item) => (
+              <Link key={item.href} href={item.href} className="hover:text-ivory/70">
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <a
+            href="https://code-werx.com"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-ivory/70"
+          >
+            Made by CODEWERX
+          </a>
         </div>
       </div>
     </footer>

@@ -15,6 +15,7 @@ export function LeadStatusSelect({ id, status }: { id: string; status: LeadStatu
           key={s}
           type="button"
           disabled={isPending}
+          aria-pressed={status === s}
           onClick={() => startTransition(() => updateLeadStatus(id, s))}
           className={cn(
             "border px-4 py-2 text-xs tracking-[0.15em] uppercase transition-colors disabled:opacity-50",

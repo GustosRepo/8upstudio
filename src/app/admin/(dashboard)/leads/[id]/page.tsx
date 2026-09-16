@@ -21,7 +21,7 @@ export default async function LeadDetailPage({
 
   return (
     <div className="max-w-3xl">
-      <Link href="/admin" className="text-xs tracking-[0.15em] uppercase text-ink/50 hover:text-ink">
+      <Link href="/admin" className="text-xs tracking-[0.15em] uppercase text-ink/65 hover:text-ink">
         ← All Leads
       </Link>
 
@@ -30,7 +30,7 @@ export default async function LeadDetailPage({
           <h1 className="font-serif text-4xl tracking-tight">{lead.name}</h1>
           <p className="mt-1 text-ink/60">{lead.business_name || "No business name given"}</p>
         </div>
-        <p className="text-xs tracking-[0.1em] uppercase text-ink/40">
+        <p className="text-xs tracking-[0.1em] uppercase text-ink/55">
           Submitted{" "}
           {new Date(lead.created_at).toLocaleDateString(undefined, {
             month: "long",
@@ -41,7 +41,7 @@ export default async function LeadDetailPage({
       </div>
 
       <div className="mt-10">
-        <p className="text-xs tracking-[0.15em] uppercase text-ink/50">Status</p>
+        <p className="text-xs tracking-[0.15em] uppercase text-ink/65">Status</p>
         <div className="mt-3">
           <LeadStatusSelect id={lead.id} status={lead.status} />
         </div>
@@ -60,13 +60,13 @@ export default async function LeadDetailPage({
 
       {lead.message && (
         <div className="mt-8 border-t border-ink/10 pt-8">
-          <p className="text-xs tracking-[0.15em] uppercase text-ink/50">Project Details</p>
+          <p className="text-xs tracking-[0.15em] uppercase text-ink/65">Project Details</p>
           <p className="mt-3 whitespace-pre-wrap text-ink/80">{lead.message}</p>
         </div>
       )}
 
       <div className="mt-8 border-t border-ink/10 pt-8">
-        <p className="text-xs tracking-[0.15em] uppercase text-ink/50">Attribution</p>
+        <p className="text-xs tracking-[0.15em] uppercase text-ink/65">Attribution</p>
         <div className="mt-3 grid gap-2 text-sm text-ink/60 sm:grid-cols-2">
           <span>Source: {lead.source || "—"}</span>
           <span>UTM Source: {lead.utm_source || "—"}</span>
@@ -78,7 +78,7 @@ export default async function LeadDetailPage({
       </div>
 
       <div className="mt-8 border-t border-ink/10 pt-8">
-        <p className="text-xs tracking-[0.15em] uppercase text-ink/50">Internal Notes</p>
+        <p className="text-xs tracking-[0.15em] uppercase text-ink/65">Internal Notes</p>
         <div className="mt-3">
           <LeadNotesForm id={lead.id} notes={lead.notes} />
         </div>
@@ -90,7 +90,7 @@ export default async function LeadDetailPage({
 function Detail({ label, value, href }: { label: string; value: string | null; href?: string }) {
   return (
     <div>
-      <p className="text-[10px] tracking-[0.15em] uppercase text-ink/40">{label}</p>
+      <p className="text-[10px] tracking-[0.15em] uppercase text-ink/55">{label}</p>
       {value ? (
         href ? (
           <a href={href} className="text-ink underline underline-offset-4">
@@ -100,7 +100,7 @@ function Detail({ label, value, href }: { label: string; value: string | null; h
           <p className="text-ink">{value}</p>
         )
       ) : (
-        <p className="text-ink/30">—</p>
+        <p className="text-ink/45">—</p>
       )}
     </div>
   );

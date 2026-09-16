@@ -11,13 +11,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <form action={signOutAction}>
           <button
             type="submit"
-            className="text-xs tracking-[0.15em] uppercase text-ink/50 hover:text-ink"
+            className="text-xs tracking-[0.15em] uppercase text-ink/65 hover:text-ink"
           >
             Sign Out
           </button>
         </form>
       </div>
-      <div className="px-6 py-10 sm:px-10">{children}</div>
+      <main className="px-6 py-10 sm:px-10">{children}</main>
     </div>
   );
 }

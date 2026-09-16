@@ -41,7 +41,7 @@ export function MediaPlaceholder({
           )}
         >
           <span className="font-serif text-lg text-ivory/90">{media.alt}</span>
-          <span className="font-mono text-[11px] text-ivory/50">{media.src}</span>
+          <span className="font-mono text-[11px] text-ivory/70">{media.src}</span>
         </div>
       </div>
       <div className="pointer-events-none absolute inset-0 border border-ivory/10" />

@@ -65,7 +65,7 @@ export function Hero() {
         className="absolute right-6 bottom-6 hidden flex-col items-center gap-2 sm:right-10 sm:flex"
       >
         <span className="h-12 w-px bg-ivory/40" />
-        <span className="text-[10px] tracking-[0.2em] uppercase text-ivory/50">
+        <span className="text-[10px] tracking-[0.2em] uppercase text-ivory/70">
           Scroll
         </span>
       </motion.div>

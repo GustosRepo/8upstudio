@@ -22,7 +22,9 @@ export function WorkGrid() {
         {filters.map((filter) => (
           <button
             key={filter}
+            type="button"
             onClick={() => setActive(filter)}
+            aria-pressed={active === filter}
             className={cn(
               "border px-4 py-2 text-xs tracking-[0.15em] uppercase transition-colors",
               active === filter
@@ -51,12 +53,12 @@ export function WorkGrid() {
             <div className="mt-4 flex items-baseline justify-between">
               <div>
                 <h3 className="font-serif text-xl">{project.title}</h3>
-                <p className="text-xs tracking-[0.1em] uppercase text-ink/50">
+                <p className="text-xs tracking-[0.1em] uppercase text-ink/65">
                   {project.categories.join(" · ")}
                 </p>
               </div>
               {project.metrics && (
-                <span className="text-xs tracking-[0.1em] uppercase text-ink/40">
+                <span className="text-xs tracking-[0.1em] uppercase text-ink/55">
                   {project.metrics[0]?.value} {project.metrics[0]?.label}
                 </span>
               )}

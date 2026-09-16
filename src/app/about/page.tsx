@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <div className="px-6 pt-32 pb-28 sm:px-10 sm:pt-40 sm:pb-40">
       <div className="mx-auto max-w-6xl">
-        <p className="text-xs tracking-[0.2em] uppercase text-ink/50">About</p>
+        <p className="text-xs tracking-[0.2em] uppercase text-ink/65">About</p>
         <h1 className="mt-4 max-w-2xl font-serif text-5xl tracking-tight sm:text-7xl">
           We understand content from both sides of the camera.
         </h1>

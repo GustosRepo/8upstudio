@@ -23,7 +23,7 @@ export function FeaturedWork() {
                   <h3 className="font-serif text-3xl tracking-tight sm:text-5xl">
                     {featured.title}
                   </h3>
-                  <p className="mt-2 text-xs tracking-[0.15em] uppercase text-ink/50">
+                  <p className="mt-2 text-xs tracking-[0.15em] uppercase text-ink/65">
                     {featured.categories.join(" · ")}
                   </p>
                 </div>
@@ -33,7 +33,7 @@ export function FeaturedWork() {
                     {featured.metrics.map((metric) => (
                       <div key={metric.label}>
                         <p className="font-serif text-2xl">{metric.value}</p>
-                        <p className="text-[10px] tracking-[0.15em] uppercase text-ink/50">
+                        <p className="text-[10px] tracking-[0.15em] uppercase text-ink/65">
                           {metric.label}
                         </p>
                       </div>
@@ -56,7 +56,7 @@ export function FeaturedWork() {
                 <MediaPlaceholder media={project.cover} />
                 <div className="mt-4 flex items-baseline justify-between">
                   <h4 className="font-serif text-xl">{project.title}</h4>
-                  <span className="text-xs tracking-[0.15em] uppercase text-ink/50">
+                  <span className="text-xs tracking-[0.15em] uppercase text-ink/65">
                     {project.categories[0]}
                   </span>
                 </div>

@@ -1,16 +1,32 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { primaryNav, inquireNav } from "@/data/navigation";
 import { site } from "@/data/site";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 mix-blend-difference">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
+        scrolled || open
+          ? "border-b border-ivory/10 bg-ink/90 backdrop-blur-md"
+          : "bg-gradient-to-b from-ink/50 to-transparent"
+      )}
+    >
       <div className="flex items-center justify-between px-6 py-5 text-ivory sm:px-10">
         <Link href="/" className="font-serif text-xl tracking-tight">
           {site.shortName}
@@ -32,7 +48,7 @@ export function Header() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="flex flex-col gap-1.5 sm:hidden"
+          className="-m-3 flex flex-col gap-1.5 p-3 sm:hidden"
           aria-label="Toggle menu"
           aria-expanded={open}
         >

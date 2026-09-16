@@ -1,6 +1,7 @@
 import { Resend } from "resend";
 
-const FROM_EMAIL = process.env.LEAD_EMAIL_FROM ?? "8UP Studio <hello@8upstudio.com>";
+// Falls back to Resend's shared test sender until a custom domain is verified.
+const FROM_EMAIL = process.env.LEAD_EMAIL_FROM ?? "8UP Studio <onboarding@resend.dev>";
 const STUDIO_EMAIL = process.env.LEAD_EMAIL_TO ?? "hello@8upstudio.com";
 
 function getResendClient() {

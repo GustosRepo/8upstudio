@@ -18,7 +18,7 @@ export function AboutPreview() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="text-xs tracking-[0.2em] uppercase text-ink/50">About</p>
+          <p className="text-xs tracking-[0.2em] uppercase text-ink/65">About</p>
           <h3 className="mt-4 font-serif text-3xl leading-tight tracking-tight sm:text-5xl">
             We understand content from both sides of the camera.
           </h3>
